@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "pydantic-settings-sops" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydantic_settings_sops-{{ version }}.tar.gz
-  sha256: a85b3782c2e05ebb3bdf86df53fdaf69506da0f8c8e0925dea5f4e867b5d1587
+  sha256: 8d03ea8233cec696b4737563947bc668a7cd4a2773252b40948f850784d718cd
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
